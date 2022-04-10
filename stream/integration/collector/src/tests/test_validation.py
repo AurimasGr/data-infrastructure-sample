@@ -65,6 +65,6 @@ def test_validator_pass(pass_validation):
         'some additional key': 'any string'
     }
 ])
-def test_validator_pass(fail_validation):
+def test_validator_fail(fail_validation):
 
     assert not SchemaValidator(fail_validation).validation_output.get('status')

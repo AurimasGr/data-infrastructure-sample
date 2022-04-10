@@ -22,7 +22,7 @@ def process_collected_event(event: dict) -> None:
         else:
             producer.produce(topic=conf.BAD_TOPIC, value={'error': validation_output.get('error'),
                                                           'payload': raw_data})
-    finally:
+    except:
         logger.error(f'Failed to process payload')
 
 
