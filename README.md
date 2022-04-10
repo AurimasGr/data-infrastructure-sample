@@ -15,7 +15,8 @@ In order to successfully run the two applications you will have to spin up a Kaf
 topics needed by the applications. if you haven't setup ```docker``` and ```docker-compose``` - do that. After you
 have installed ```docker``` and ```docker-compose``` execute: ```docker-compose up .```. After few seconds you will 
 have local Kafka cluster up and running, I also included a convenient Kafka UI through which you can easily manage your
-clusters, you can access it on http://localhost:5051. You can create required topics through the following interface:
+clusters, you can access it on http://localhost:8081. You can create required topics through the following interface:
+
 ![alt text](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/pictures/kafka-ui.png?raw=true)
 
 Create 4 topics: ```raw_good```, ```raw_bad```, ```enriched_good```, ```enriched_bad```. Now feel free to test 
