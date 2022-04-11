@@ -4,7 +4,7 @@ import os
 LOG_FORMAT = f'[%(asctime)s]: {os.getpid()} %(levelname)s %(message)s'
 DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 HANDLERS = [logging.StreamHandler()]
-LOG_LEVEL = logging.ERROR
+LOG_LEVEL = logging.INFO
 
 
 def setup_logger() -> logging.Logger:

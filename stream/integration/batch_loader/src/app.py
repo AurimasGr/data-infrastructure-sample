@@ -8,7 +8,7 @@ conf = getattr(config, f'{os.environ["APP_ENV"].title()}Config')
 
 logger = logger.setup_logger()
 consumer = Consumer(conf.ENRICHED_GOOD_TOPIC).consumer
-producer = Producer(consumer)
+producer = Producer(consumer, logger)
 
 
 def main(producer, consumer):

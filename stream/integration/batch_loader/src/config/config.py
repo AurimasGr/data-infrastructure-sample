@@ -3,7 +3,7 @@ class BaseConfig:
     TESTING = False
     DEBUG = False
     ENRICHED_GOOD_TOPIC = 'enriched_good'
-    CONSUMER_GROUP_ID = 'batch_loader'
+    CONSUMER_GROUP_ID = 'batch_loader_3'
     ENABLE_CONSUMER_AUTOCOMMIT = False
     CONSUMER_AUTO_OFFSET_RESET = 'earliest'
     MINIO_OUTPUT_BUCKET = 'sample-infrastructure-project'
