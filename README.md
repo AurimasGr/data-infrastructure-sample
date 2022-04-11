@@ -3,17 +3,17 @@ This repository holds a sample data project implemented with Python. It follows 
 
 ![alt text](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/pictures/architecture.png?raw=true)
 
-Currently only 2 elements have been implemented, you can find them here:
+Currently only 3 elements have been implemented, you can find them here:
 
    1. [Collector](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector)
    2. [Enricher](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/enricher)
    3. ElasticSearchLoader: [Link pending]
-   4. BatchLoader: [Link pending]
+   4. [BatchLoader](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/batch_loader)
    5. DataProcessor: [Link pending]
    
-In order to successfully run the two applications you will have to spin up a Kafka cluster and create
-topics needed by the applications. if you haven't setup ```docker``` and ```docker-compose``` - do that. After you
-have installed ```docker``` and ```docker-compose``` execute: ```docker-compose up .```. After few seconds you will 
+In order to successfully run the three applications you will have to spin up a Kafka cluster and local MinIO instance 
+and create topics and buckets needed by the applications. if you haven't setup ```docker``` and ```docker-compose``` - do that. After you
+have installed ```docker``` and ```docker-compose``` execute: ```docker-compose up```. After few seconds you will 
 have local Kafka cluster up and running, I also included a convenient Kafka UI through which you can easily manage your
 clusters, you can access it on http://localhost:8081. You can create required topics through the following interface:
 
@@ -21,6 +21,12 @@ clusters, you can access it on http://localhost:8081. You can create required to
 
 Create 4 topics: ```raw_good```, ```raw_bad```, ```enriched_good```, ```enriched_bad```. Now feel free to test 
 ```collector``` and ```enricher```.
+
+Create bucket ```sample-infrastructure-project``` through MinIO UI http://localhost:9001 (ensure that bucket is set to 
+be public). Use dev credentials to login:
+
+- username: ```AKIAIOSFODNN7EXAMPLE```
+- password: ```wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY```
 
 You can find a sample third party data integration application 
 [here](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/sample_integration_applications/tlc_trip_record_data).
