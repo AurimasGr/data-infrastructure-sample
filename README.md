@@ -5,8 +5,8 @@ This repository holds a sample data project implemented with Python. It follows 
 
 Currently only 2 elements have been implemented, you can find them here:
 
-   1. Collector: [a link](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector)
-   2. Enricher: [a link](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/enricher)
+   1. [Collector](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector)
+   2. [Enricher](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/enricher)
    3. ElasticSearchLoader: [Link pending]
    4. BatchLoader: [Link pending]
    5. DataProcessor: [Link pending]
