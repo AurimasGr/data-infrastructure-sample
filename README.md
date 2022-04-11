@@ -23,7 +23,7 @@ Create 4 topics: ```raw_good```, ```raw_bad```, ```enriched_good```, ```enriched
 ```collector``` and ```enricher```.
 
 You can find a sample third party data integration application 
-[here](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector/sample_integration_applications/tlc_trip_record_data).
+[here](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/sample_integration_applications/tlc_trip_record_data).
 
 Project Description
 -
