@@ -22,6 +22,9 @@ clusters, you can access it on http://localhost:8081. You can create required to
 Create 4 topics: ```raw_good```, ```raw_bad```, ```enriched_good```, ```enriched_bad```. Now feel free to test 
 ```collector``` and ```enricher```.
 
+You can find a sample third party data integration application 
+[here](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector/sample_integration_applications/tlc_trip_record_data).
+
 Project Description
 -
 The infrastructure is meant to serve as a system that allows users to collect arbitrary events from numerous sources, 

@@ -45,11 +45,15 @@ In case of schema validation fail, the payload is sent to ```raw_bad``` Kafka to
 
 Development mode
 -
-Run ```./dev_mode.sh``` to start Flask server in development mode, note that Kafka has to be started beforehand for the application to start successfully. Refer to [a link](https://github.com/AurimasGr/data-infrastructure-sample) on how to do that. After the server is started you can test it by sending json payloads to http://localhost:5050/collect you can investigate forvarded events by accessing Kafka web ui at http://localhost:8081
+Run ```./dev_mode.sh``` to start Flask server in development mode, note that Kafka has to be started beforehand 
+for the application to start successfully. Refer to [Project README](https://github.com/AurimasGr/data-infrastructure-sample) 
+on how to do that. After the server is started you can test it by sending json payloads to http://localhost:5000/collect 
+you can investigate forvarded events by accessing Kafka web ui at http://localhost:8081
 
 Testing
 -
-Run ```ci.sh``` to execute tests. You can refer to sample producer at [...]
+Run ```ci.sh``` to execute tests. You can refer to sample producer 
+at [NYC TLC sample producer](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector).
 
 TODO
 -
