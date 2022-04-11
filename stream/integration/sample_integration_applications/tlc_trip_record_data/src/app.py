@@ -30,9 +30,11 @@ def load_pandas(source: str) -> pd.DataFrame:
     return df
 
 
-def main(sleep_time: float, max_record_count: int) -> None:
+def main(sleep_time: float, max_record_count: int, download: int) -> None:
 
-    # download_file(SOURCE_URL, DESTINATION)
+    if download == 1:
+        download_file(SOURCE_URL, DESTINATION)
+
     logger.debug('data downloaded.')
     yellow_df = load_pandas(DESTINATION)
 
@@ -47,12 +49,6 @@ def main(sleep_time: float, max_record_count: int) -> None:
 
     for index, row in yellow_df.iterrows():
 
-        validation_output = SchemaValidator(row.to_dict(), top_level_fields).validation_output
-        logger.debug(validation_output)
-        processed_event = Processor(event=validation_output.get('data').dict(),
-                                    top_level_fields=top_level_fields).processed_event
-        logger.debug(processed_event)
-        logger.debug(producer.produce(processed_event))
         try:
             validation_output = SchemaValidator(row.to_dict(), top_level_fields).validation_output
             if validation_output.get('status'):
@@ -77,8 +73,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Runs producer which writes TLCTripRecordData to collector endpoint")
     parser.add_argument('-s', '--sleep_time', required=False, default='1')
     parser.add_argument('-m', '--max_record_count', required=False, default='1000')
+    parser.add_argument('-d', '--download', required=False, default='1')
     args = parser.parse_args()
 
     logger.info(f'Starting sample producer (TLCTripRecordData) with {args.sleep_time} s between sending records')
 
-    main(float(args.sleep_time), int(args.max_record_count))
+    main(float(args.sleep_time), int(args.max_record_count), int(args.download))
