@@ -53,7 +53,7 @@ you can investigate forvarded events by accessing Kafka web ui at http://localho
 Testing
 -
 Run ```ci.sh``` to execute tests. You can refer to sample producer 
-at [NYC TLC sample producer](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/collector).
+at [NYC TLC sample producer](https://github.com/AurimasGr/data-infrastructure-sample/blob/main/stream/integration/sample_integration_applications/tlc_trip_record_data).
 
 TODO
 -
