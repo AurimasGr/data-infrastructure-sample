@@ -12,7 +12,7 @@ conf = getattr(config, f'{os.environ["APP_ENV"].title()}Config')
 
 class Producer:
 
-    def __init__(self, consumer):
+    def __init__(self, consumer, logger):
 
         self.records = list()
         self.producer = Minio(
@@ -23,6 +23,7 @@ class Producer:
         )
         self.init_time = datetime.now()
         self.consumer = consumer
+        self.logger = logger
 
     def produce(self) -> None:
 
@@ -43,6 +44,7 @@ class Producer:
 
         if (len(self.records) >= conf.BUFFER_RECORD_COUNT) | ((datetime.now() - self.init_time).total_seconds() * 1000 >= conf.BUFFER_MILLISECONDS):
             self.produce()
+            self.logger.info(f'{len(self.records)} events written.')
             self.records = list()
             self.init_time = datetime.now()
             self.consumer.commit()
