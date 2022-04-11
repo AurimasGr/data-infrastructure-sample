@@ -60,4 +60,6 @@ TODO
 - ```Add poetry dependency management```
 - ```Add GitHub actions for CI tests```
 - ```Separate paths for different api versions```
+- ```Add metrics```
+- ```Add centralised logs```
 

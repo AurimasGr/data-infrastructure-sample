@@ -54,4 +54,6 @@ TODO
 - ```Add GitHub actions for CI tests```
 - ```Separate schemas of different artifacts into separate folders```
 - ```investigate failing integer/float validations (see failing test)```
+- ```Add metrics```
+- ```Add centralised logs```
 

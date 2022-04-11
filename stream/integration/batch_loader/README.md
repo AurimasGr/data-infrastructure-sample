@@ -19,3 +19,5 @@ TODO
 - ```Add GitHub actions for CI tests```
 - ```Add buffering per buffer size```
 - ```Add tests```
+- ```Add metrics```
+- ```Add centralised logs```
