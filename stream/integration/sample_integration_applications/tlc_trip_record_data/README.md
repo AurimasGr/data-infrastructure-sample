@@ -24,4 +24,6 @@ TODO
 - ```Add GitHub actions for CI tests```
 - ```Implement other NYC TLC dataset integrations```
 - ```Implement tests```
+- ```Add metrics```
+- ```Add centralised logs```
 
